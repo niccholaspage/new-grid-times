@@ -7,6 +7,8 @@ import MarketCard from '../MarketCard';
 import SectionTitle from '../SectionTitle';
 import MiniStory from '../MiniStory';
 
+import { QUERIES } from "../../constants";
+
 const SpecialtyStoryGrid = () => {
   return (
     <Wrapper>
@@ -47,6 +49,10 @@ const SpecialtyStoryGrid = () => {
 const Wrapper = styled.div`
   display: grid;
   gap: 48px;
+
+  @media ${QUERIES.desktopAndUp} {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const MarketsSection = styled.section``;
@@ -55,7 +61,7 @@ const MarketCards = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns:
-      repeat(auto-fill, minmax(160px, 1fr));
+      repeat(auto-fill, minmax(160px, 1fr));}
 `;
 
 const SportsSection = styled.section``;
